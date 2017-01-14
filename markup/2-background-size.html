@@ -3,9 +3,10 @@
     <head>
         <meta charset="utf-8"/>
         <title>background-size</title>
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
         <style>
             body {
-                font-family: sans-serif;
+                font-family: 'Oswald', sans-serif;
                 font-size: 200%;
                 background-color: #2D2A27;
                 color: #FEF1D8;
@@ -13,9 +14,9 @@
 
             div {
                 color: #DCDBDA;
-                width: 400px;
-                height: 250px;
-                background: url(img/lucky.png) #B0A796 no-repeat;
+                max-width: 600px;
+                height: auto;
+                background: url(../img/lucky.png) #B0A796 no-repeat;
                 border: 10px solid #42403D;
                 margin: 30px;
                 float: left;
@@ -54,11 +55,17 @@
     </head>
     <body>
         <div id="eins">
-            <p>keine Größenänderung
-            </p>
+            <p>keine Größenänderung</p>
         </div>
         <div id="zwei">
             <p>
+                <code>
+                    #zwei {
+                        -webkit-background-size: 20px 40px;
+                        background-size: 20px 40px;
+                        background-repeat: repeat;
+                    }
+                </code>
             </p>
         </div>
         <div id="drei">
