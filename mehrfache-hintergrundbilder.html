@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8"/>
-    <title>Mehrfache Hintergrundbilder</title>
-    <style>
-        body {
-            background: #2D2A27;
-            margin: 50px;
-        }
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Mehrfache Hintergrundbilder</title>
+        <style>
+            body {
+                background: #2D2A27;
+                margin: 50px;
+            }
 
-        .container {
-            background: #49443F;
-            width: 600px;
-            height: 700px;
-            border: 2px solid black;
-            background-image: url(img/cola.png), url(img/lucky.png), url(img/mummy.png);
-            background-repeat: no-repeat;
-            background-position: bottom center, top left, top right;
-        }
-
-    </style>
-</head>
-<body>
-<div class="container">
-</div>
-</body>
+            .container {
+                background: #49443F;
+                width: 600px;
+                height: 700px;
+                border: 2px solid black;
+                background-image: url(img/lucky.png), url(img/cola.png), url(img/mummy.png);
+                background-repeat: no-repeat, repeat-x;
+                background-position: bottom center, bottom left, top right;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div class="container"></div>
+        </div>
+    </body>
 </html>
