@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<!--[if lte IE 8]>
+    <html class="ie ie8">
+<![endif]-->
+<!--[if IE 9]>
+    <html class="ie ie9">
+<![endif]-->
+<!--[if !(IE 8) | !(IE 9) ]><!-->
+    <html>
+<!--<![endif]-->
+    <head>
+        <meta charset="utf-8"/>
+        <title>Farbverläufe</title>
+        <style>
+            body {
+                font-family: sans-serif;
+                background: #EBE6C8;
+                padding: 20px;
+            }
+
+            div {
+                height: 300px;
+                width: 200px;
+                float: left;
+                margin: 20px;
+            }
+
+            .eins, .zwei, .drei {
+                background: #556E69;
+                background: -webkit-linear-gradient(#ADDDD2, #040707);
+                background: linear-gradient(#ADDDD2, #040707);
+            }
+
+            .ie9 .eins {
+                background: url(../img/farbverlauf.svg) no-repeat;
+            }
+
+            .ie9 .zwei {
+                background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPg0KPGRlZnM+DQogIDxsaW5lYXJHcmFkaWVudCBpZD0ic3ZnXzEiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj4NCiAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNBRERERDIiLz4NCiAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA0MDcwNyIvPg0KICA8L2xpbmVhckdyYWRpZW50Pg0KIDwvZGVmcz4NCiAgPHJlY3QgZmlsbD0idXJsKCNzdmdfMSkiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIC8+DQo8L3N2Zz4NCg==);
+            }
+
+            .drei {
+                background: #556E69;
+                background: -webkit-linear-gradient(#ADDDD2, #040707);
+                background: linear-gradient(#ADDDD2, #040707);
+                filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ADDDD2', endColorstr='#040707', GradientType=0);
+            }
+
+            .ie9 .drei {
+                filter: none;
+                background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPg0KPGRlZnM+DQogIDxsaW5lYXJHcmFkaWVudCBpZD0ic3ZnXzEiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj4NCiAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNBRERERDIiLz4NCiAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzA0MDcwNyIvPg0KICA8L2xpbmVhckdyYWRpZW50Pg0KIDwvZGVmcz4NCiAgPHJlY3QgZmlsbD0idXJsKCNzdmdfMSkiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIC8+DQo8L3N2Zz4NCg==);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="eins"></div>
+        <div class="zwei"></div>
+        <div class="drei"></div>
+        <div class="vier"></div>
+        <div class="fuenf"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </body>
+</html>
