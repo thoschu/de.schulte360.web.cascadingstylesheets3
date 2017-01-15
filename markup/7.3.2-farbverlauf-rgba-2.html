@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Farbverlauf mit rgba()</title>
+        <style>
+            div {
+                height: 225px;
+                width: 300px;
+                float: left;
+                margin: 20px;
+            }
+
+            .beispiel {
+                background: white;
+                background: -webkit-linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(../img/pattern.gif);
+                background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(../img/pattern.gif);
+            }
+
+            .beispiel2 {
+                background: -webkit-radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(../img/pattern.gif);
+                background: radial-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1)), url(../img/pattern.gif);
+            }
+
+            .beispiel3 {
+                background-image: -webkit-linear-gradient(rgba(70, 155, 41, 0.5), rgba(70, 155, 41, 0.5)), url(../img/weg.jpg);
+                background-image: linear-gradient(rgba(70, 155, 41, 0.5), rgba(70, 155, 41, 0.5)), url(../img/weg.jpg);
+            }
+
+            .beispiel4 {
+                background: -webkit-radial-gradient(rgba(70, 155, 41, 0.1) 30%, rgba(70, 155, 41, 0.9)), url(../img/weg.jpg);
+                background: radial-gradient(rgba(70, 155, 41, 0.1) 30%, rgba(70, 155, 41, 0.9)), url(../img/weg.jpg);
+            }
+
+            .beispiel3:hover, .beispiel4:hover {
+                background: url(../img/weg.jpg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="beispiel">
+            <p></p>
+        </div>
+        <div class="beispiel2">
+            <p></p>
+        </div>
+        <div class="beispiel3">
+            <p></p>
+        </div>
+        <div class="beispiel4">
+            <p></p>
+        </div>
+    </body>
+</html>
