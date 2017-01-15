@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Farbverläufe</title>
+        <style>
+            body {
+                background: rgb(45, 39, 38);
+                padding: 20px;
+                font-family: vt323, serif;
+            }
+
+            div {
+                height: 120px;
+                width: 220px;
+                float: left;
+                margin: 10px;
+                background: #ADDDD2;
+            }
+
+            div:nth-child(1) {
+                background-image: -webkit-linear-gradient(left, #FF6201, #040707);
+                background-image: linear-gradient(to right, #FF6201, #040707);
+            }
+
+            div:nth-child(2) {
+                background-image: -webkit-linear-gradient(left, #FF6201 50%, #040707 50%);
+                background-image: linear-gradient(to right, #FF6201 50%, #040707 50%);
+            }
+
+            div:nth-child(3) {
+                /*
+                http://www.w3schools.com/css/css3_gradients.asp
+                background: linear-gradient(direction, color-stop1, color-stop2, ...);
+                90 minus Standardwert (135) = alte Gradangabe (-45deg)
+                */
+                background-image: -webkit-linear-gradient(-45deg, #FF6201, #040707);
+                background-image: linear-gradient(135deg, #FF6201, #040707);
+            }
+
+            div:nth-child(4) {
+                background-image: -webkit-linear-gradient(-45deg, #FF6201 50%, #040707 50%);
+                background-image: linear-gradient(135deg, #FF6201 50%, #040707 50%);
+            }
+        </style>
+        <script src="//use.edgefonts.net/vt323.js"></script>
+    </head>
+    <body>
+        <div id="a">a</div>
+        <div id="b">b</div>
+        <div id="c">c</div>
+        <div id="d">d</div>
+    </body>
+</html>
