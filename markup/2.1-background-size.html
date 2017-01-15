@@ -9,13 +9,14 @@
                 font-family: 'Oswald', sans-serif;
                 font-size: 200%;
                 background-color: #2D2A27;
-                color: #FEF1D8;
+
             }
 
             div {
-                color: #DCDBDA;
+                color: inherit;
                 max-width: 600px;
                 height: auto;
+                min-height: 64px;
                 background: url(../img/lucky.png) #B0A796 no-repeat;
                 border: 10px solid #42403D;
                 margin: 30px;
@@ -23,17 +24,17 @@
             }
 
             p {
-                padding: 20px;
+                margin: 20px;
+                font-weight: bold;
             }
 
-            /*
             #eins {
 
             }
 
             #zwei {
                 -webkit-background-size: 20px 40px;
-                background-size: 20px 40px;
+                background-size: 32px 32px;
                 background-repeat: repeat;
             }
 
@@ -50,7 +51,6 @@
             #fuenf {
                 background-size: cover;
             }
-            */
         </style>
     </head>
     <body>
@@ -70,14 +70,31 @@
         </div>
         <div id="drei">
             <p>
+                <code>
+                    #drei {
+                        -webkit-background-size: 100% 100%;
+                        background-size: 100% 100%;
+                    }
+                </code>
             </p>
         </div>
         <div id="vier">
             <p>
+                <code>
+                    #vier {
+                        clear: left;
+                        background-size: contain;
+                    }
+                </code>
             </p>
         </div>
         <div id="fuenf">
             <p>
+                <code>
+                    #fuenf {
+                        background-size: cover;
+                    }
+                </code>
             </p>
         </div>
     </body>

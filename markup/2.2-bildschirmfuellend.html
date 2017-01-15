@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>bildschirmfüllendes Hintergrundbild</title>
+        <style>
+            html, body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                background-repeat: no-repeat;
+                background-image: url(../img/background-pattern.jpg);
+            }
+
+            .bgscover {
+                background-size: cover;
+            }
+
+            .bgscontain {
+                background-size: contain;
+            }
+
+            button {
+                margin: 0 auto;
+                display: block;
+                cursor: help;
+            }
+
+            .btn {
+                background: #3498db;
+                background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+                background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+                background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+                background-image: -o-linear-gradient(top, #3498db, #2980b9);
+                background-image: linear-gradient(to bottom, #3498db, #2980b9);
+                -webkit-border-radius: 7px;
+                -moz-border-radius: 7px;
+                border-radius: 7px;
+                text-shadow: 1px 1px 3px #666666;
+                font-family: Arial, sans-serif;
+                color: #ffffff;
+                font-size: 20px;
+                padding: 10px 20px 10px 20px;
+                border: solid #1f628d 2px;
+                text-decoration: none;
+            }
+
+            .btn:hover {
+                background: #3cb0fd;
+                background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+                background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+                background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+                background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+                background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body class="bgscover">
+        <main>
+            <button id="toggle" class="btn"><span id="cover">COVER</span> / <span>CONTAIN</span></button>
+        </main>
+        <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function () {
+                console.info("ready!");
+                $( "button" ).click(function() {
+                    var b = $("body");
+                    if (b.hasClass("bgscover")) {
+                        b.removeClass( "bgscover" ).addClass( "bgscontain" );
+                    } else {
+                        b.removeClass( "bgscontain" ).addClass( "bgscover" );
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
