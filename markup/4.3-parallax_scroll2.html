@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Parallax</title>
+        <style>
+            body, html {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                font: 120% sans-serif;
+            }
+
+            .eins {
+                /*background-attachment: scroll|fixed|local|initial|inherit;*/
+                background: url(../img/hg_1.jpg) 50% 0 no-repeat fixed;
+                background-size: cover;
+                color: white;
+                height: 100%;
+                margin: 0 auto;
+            }
+
+            .zwei {
+                background: url(../img/hg_2.jpg) 50% 0 no-repeat fixed;
+                background-size: cover;
+                color: white;
+                height: 100%;
+                margin: 0 auto;
+                overflow: hidden;
+            }
+
+            .drei {
+                background: url(../img/hg_3.jpg) 50% 0 no-repeat fixed;
+                background-size: cover;
+                color: white;
+                height: 100%;
+            }
+
+            p {
+                width: 50%;
+                padding: 0 10%;
+                margin: auto;
+            }
+
+            h2, h3 {
+                margin-top: 0;
+            }
+
+            a {
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="eins">
+            <h2>Plug-in unter <a href="https://github.com/IanLunn/jQuery-Parallax">https://github.com/IanLunn/jQuery-Parallax </a>ggf. herunterladen!</h2>
+            <br>
+            <h3>Oder CDN nutzen <code>https://cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax-min.js</code></h3>
+        </div>
+        <div class="zwei">
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+                dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+                clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+                consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
+                diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
+                takimata sanctus est Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nibh erat, sagittis sit amet congue at, aliquam
+                eu libero. Integer molestie, turpis vel ultrices facilisis, nisi mauris sollicitudin mauris, volutpat elementum
+                enim urna eget odio. Donec egestas aliquet facilisis. Nunc eu nunc eget neque ornare fringilla. Nam vel sodales
+                lectus. Nulla in pellentesque eros. Donec ultricies, enim vitae varius cursus, risus mauris iaculis neque,
+                euismod sollicitudin metus erat vitae sapien. Sed pulvinar.</p>
+        </div>
+        <div class="drei">
+            <h2>Und ein dritter Bereich</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nibh erat, sagittis sit amet congue at, aliquam
+                eu libero. Integer molestie, turpis vel ultrices facilisis, nisi mauris sollicitudin mauris, volutpat elementum
+                enim urna eget odio. Donec egestas aliquet facilisis. Nunc eu nunc eget neque ornare fringilla. Nam vel sodales
+                lectus. Nulla in pellentesque eros. Donec ultricies, enim vitae varius cursus, risus mauris iaculis neque,
+                euismod sollicitudin metus erat vitae sapien. Sed pulvinar.</p>
+        </div>
+        <div class="vier">
+            <p> Donec egestas aliquet facilisis. Nunc eu nunc eget neque ornare fringilla. Nam vel sodales lectus. Nulla in
+                pellentesque eros. Donec ultricies, enim vitae varius cursus, risus mauris iaculis neque, euismod sollicitudin
+                metus erat vitae sapien. Sed pulvinar.</p>
+        </div>
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax-min.js"></script>
+        <script>
+            $('.eins').parallax("50%", 0.3);
+            $('.zwei').parallax("50%", 0.4);
+            $('.drei').parallax("50%", 0.3);
+        </script>
+    </body>
+</html>
