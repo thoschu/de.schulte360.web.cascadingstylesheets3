@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Farbverläufe</title>
+        <style>
+            body {
+
+                background: rgb(45, 39, 38);
+                padding: 20px;
+            }
+
+            div {
+                height: 300px;
+                width: 200px;
+                float: left;
+                margin: 20px;
+                background-color: #FF6201;
+            }
+
+            div:nth-child(1) {
+                background-image: -webkit-radial-gradient(#FF6201, #040707);
+                background-image: radial-gradient(#FF6201, #040707);
+            }
+
+            div:nth-child(2) {
+                background-image: -webkit-radial-gradient(#FF6201 50%, #040707 50%);
+                background-image: radial-gradient(#FF6201 50%, #040707 50%);
+            }
+
+            div:nth-child(3) {
+                width: 300px;
+                height: 300px;
+                background-image: -webkit-radial-gradient(#FF6201 50%, #040707 50%);
+                background-image: radial-gradient(#FF6201 50%, #040707 50%);
+            }
+
+            div:nth-child(4) {
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                background-image: -webkit-radial-gradient(#FF6201 50%, #040707 50%);
+                background-image: radial-gradient(#FF6201 50%, #040707 50%);
+            }
+
+            div:nth-child(5) {
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                background-image: -webkit-radial-gradient(#FF6201 0%, #040707 100%);
+                background-image: radial-gradient(#FF6201 0%, #040707 100%);
+            }
+
+            section {
+                border: 2px brown solid;
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+                float: left;
+                margin: 20px;
+                background-color: #556E69;
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <section></section>
+    </body>
+</html>
