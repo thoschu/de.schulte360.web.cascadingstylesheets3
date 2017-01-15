@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Farbverläufe</title>
+        <style>
+            body {
+                font-family: vt323, sans-serif;
+                background: rgb(45, 39, 38);
+                padding: 20px;
+            }
+
+            div {
+                display: inline-block;
+                margin: 20px;
+                padding: 0 10px;
+                background: #556E69; /* fallback*/
+                width: 200px;
+                height: auto;
+            }
+
+            div:nth-child(1) {
+                background-image: -webkit-linear-gradient(#FF6201, #fff, #040707);
+                background-image: linear-gradient(#FF6201, #fff, #040707);
+            }
+
+            div:nth-child(2) {
+                background-image: -webkit-linear-gradient(#FF6201, #fffc00);
+                background-image: linear-gradient(#FF6201, #fffc00);
+            }
+
+            div:nth-child(3) {
+                background-image: -webkit-linear-gradient(#FF6201, #00f2ff 50%);
+                background-image: linear-gradient(#FF6201, #00f2ff 30%);
+            }
+
+            div:nth-child(4) {
+                background-image: -webkit-linear-gradient(#FF6201 50%, #ff00f6 50%);
+                background-image: linear-gradient(#FF6201 30%, #ff00f6 70%);
+            }
+
+            div:nth-child(5) {
+                background-image: -webkit-linear-gradient(#FF6201 50%, #ffffff 50%);
+                background-image: linear-gradient(#FF6201 50%, #ffffff 50%);
+            }
+
+            div:nth-child(6) {
+                background-image: -webkit-linear-gradient(#FF6201 50%, #ffffff 50%);
+                background-image: linear-gradient(#FF6201 70%, #ffffff 30%);
+            }
+        </style>
+        <script src="//use.edgefonts.net/vt323.js"></script>
+    </head>
+    <body>
+        <div id="1">
+            <p>
+                background-image: -webkit-linear-gradient(#FF6201, #fff, #040707);
+                <br>
+                background-image: linear-gradient(#FF6201, #fff, #040707);
+            </p>
+        </div>
+        <div id="2">
+            <p>
+                background-image: -webkit-linear-gradient(#FF6201, #040707);
+                <br>
+                background-image: linear-gradient(#FF6201, #040707);
+            </p>
+        </div>
+        <div id="3">
+            <p>
+                background-image: -webkit-linear-gradient(#FF6201, #ffffff 50%);
+                <br>
+                background-image: linear-gradient(#FF6201, #ffffff 30%);
+            </p>
+        </div>
+        <div id="4">
+            <p>
+                background-image: -webkit-linear-gradient(#FF6201 50%, #ffffff 50%);
+                <br>
+                background-image: linear-gradient(#FF6201 30%, #ffffff 70%);
+            </p>
+        </div>
+        <div id="5">
+            <p>
+                background-image: -webkit-linear-gradient(#FF6201 50%, #ffffff 50%);
+                <br>
+                background-image: linear-gradient(#FF6201 50%, #ffffff 50%);
+            </p>
+        </div>
+        <div id="6">
+            <p>
+                background-image: -webkit-linear-gradient(#FF6201 50%, #ffffff 50%);
+                <br>
+                background-image: linear-gradient(#FF6201 70%, #ffffff 30%);
+            </p>
+        </div>
+    </body>
+</html>
