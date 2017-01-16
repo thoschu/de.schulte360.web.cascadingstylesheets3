@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <title>CSS3 - Webfonts</title>
+        <meta name="description" content="Beispielseiten für CSS3">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:700,400|Roboto+Slab:400,700' rel='stylesheet'>
+        <style>
+            @font-face {
+                font-family: 'MyWebFont';
+                src: url('../font/whydoweblinksofrequently-jungle.eot'); /* IE9 Compat Modes */
+                src: url('../font/whydoweblinksofrequently-jungle.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('../font/whydoweblinksofrequently-jungle.woff2') format('woff2'), /* Super Modern Browsers */
+                url('../font/whydoweblinksofrequently-jungle.woff') format('woff'), /* Pretty Modern Browsers */
+                url('../font/whydoweblinksofrequently-jungle.ttf')  format('truetype'), /* Safari, Android, iOS */
+                url('../font/whydoweblinksofrequently-jungle.svg#svgFontName') format('svg'); /* Legacy iOS */
+            }
+
+            /* Verhindert "Hüpfen" bei kurzen Seiten ohne Rollbalken */
+            html {
+                overflow-y: scroll;
+            }
+
+            /* Seitenbreite begrenzen */
+            body {
+                background: white;
+                color: #000;
+                font-family: 'Open Sans', sans-serif;
+                min-width: 300px;
+                max-width: 600px;
+                padding-top: 1em;
+                margin: 0 auto;
+            }
+
+            h1, h2 {
+                font-family: 'Roboto Slab', serif;
+            }
+
+            p:nth-child(2) {
+                font-family: 'MyWebFont', sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS3 by Tom</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis ligula tortor. Duis dictum, dolor eget dignissim
+            scelerisque, augue lorem dictum nisl, quis molestie purus lectus vel ligula. Curabitur eget nisl mauris. Donec
+            pharetra tellus sollicitudin lacus volutpat lacinia. </p>
+        <h2>Text gestalten mit CSS3</h2>
+        <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede
+            justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+            justo. </p>
+        <p>Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
+            vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. </p>
+        <p>Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.
+            Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget
+            dui.</p>
+        <p>Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus,
+            sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar,
+            hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis
+            faucibus. </p>
+        <code>
+            @font-face {
+                font-family: 'Open Sans';
+                font-style: normal;
+                font-weight: 400;
+                src: local('Open Sans'), local('OpenSans'), url(http://fonts.gstatic.com/s/opensans/v13/K88pR3goAWT7BTt32Z01mxJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');
+                unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+            }
+        </code>
+    </body>
+</html>
