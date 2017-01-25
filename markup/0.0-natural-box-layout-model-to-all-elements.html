@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <title>natural box layout model</title>
+        <style>
+            /* apply a natural box layout model to all elements, but allowing components to change */
+            html {
+                font-size: 100%;
+                box-sizing: border-box
+            }
+
+            *, *:before, *:after {
+                box-sizing: inherit
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>Tom S.</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Beispielseite für CSS3">
+        <title>CSS3 - display: flex;</title>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <script src="//use.edgefonts.net/vt323.js"></script>
+        <style>
+            /* apply a natural box layout model to all elements, but allowing components to change */
+            html {
+                font-size: 100%;
+                box-sizing: border-box
+            }
+            *, *:before, *:after {
+                box-sizing: inherit
+            }
+
+            body {
+                font-family: vt323, serif;
+            }
+
+            ul {
+                display: flex;
+                list-style-type: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS3</h1>
+        <ul>
+            <li>
+                <span class="fa fa-home" aria-hidden="true"></span>
+            </li>
+            <li>
+                <i class="fa fa-ban" aria-hidden="true"></i>
+            </li>
+            <li>
+                <span class="fa fa-spinner fa-pulse fa-3x fa-fw"></span>
+            </li>
+            <li>
+                <span class="fa fa-quote-left fa-3x fa-pull-left fa-border" aria-hidden="true"></span>
+            </li>
+        </ul>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris quis ligula tortor. Duis dictum, dolor eget dignissim
+            scelerisque, augue lorem dictum nisl, quis molestie purus lectus vel ligula. Curabitur eget nisl mauris. Donec
+            pharetra tellus sollicitudin lacus volutpat lacinia.
+        </p>
+    </body>
+</html>
