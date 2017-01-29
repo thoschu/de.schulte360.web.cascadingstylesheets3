@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Beispielseite für CSS3">
+        <title>CSS3 - flex-direction, flex-wrap and flex-flow, order</title>
+        <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+        <style>
+            /* apply a natural box layout model to all elements, but allowing components to change */
+            html {
+                font-size: 100%;
+                box-sizing: border-box
+            }
+            *, *:before, *:after {
+                box-sizing: inherit
+            }
+
+            body {
+                font-family: 'Special Elite', cursive;
+                color: darkgray
+            }
+
+            main section#a {
+                display: flex;
+                flex-direction: row-reverse; /* default: row; row-reverse; column; column-reverse; */
+                flex-wrap: wrap; /* default: nowrap; wrap */
+                border: darkgray solid .25rem;
+                border-radius: 5px;
+                background-color: grey;
+                max-width: 750px;
+                height: auto;
+                padding: 1rem;
+                margin: 0 auto
+            }
+
+            main section#a article {
+                background-color: #2D2A27;
+                padding: .5rem;
+                margin: .5rem;
+            }
+
+            main article#b {
+                padding: 1rem;
+                border: double 2px black;
+                margin-top: .5rem
+            }
+
+            main article#b figure {
+                display: flex;
+                flex-direction: column-reverse;
+                max-width: 383px;
+                height: auto;
+                margin: 0 auto
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS3 - flex-direction, flex-wrap and flex-flow, order</h1>
+        <hr>
+        <h2>Richtung (Flex-Container )</h2>
+        <main>
+            <section id="a">
+                <article>Flex-Item 1 - Lorem ipsum dolor ...</article>
+                <article>Flex-Item 2 - Lorem ipsum dolor ...</article>
+                <article>Flex-Item 3 - Lorem ipsum dolor ...</article>
+                <article>Flex-Item 4 - Lorem ipsum dolor ...</article>
+                <article>Flex-Item 5 - Lorem ipsum dolor ...</article>
+            </section>
+            <article id="b">
+                <figure>
+                    <img src="http://i61.tinypic.com/2s844u0.jpg" alt="The Pulpit Rock">
+                    <figcaption>Fig1. - Foo bar baz...</figcaption>
+                </figure>
+            </article>
+        </main>
+    </body>
+</html>
