@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="no-js" lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Beispielseite für CSS3">
+        <title>CSS3 - display: grid;</title>
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" integrity="sha256-8E6QUcFg1KTnpEU8TFGhpTGHw5fJqB9vCms3OhAYLqw=" crossorigin="anonymous"></script>
+        <script src="//use.edgefonts.net/vt323.js"></script>
+        <style>
+            /* apply a natural box layout model to all elements, but allowing components to change */
+            html {
+                font-size: 100%;
+                box-sizing: border-box
+            }
+
+            *, *:before, *:after {
+                box-sizing: inherit
+            }
+
+            body {
+                font-family: vt323, serif
+            }
+
+            .container {
+                display: grid;
+                grid-template-rows:200px 1fr 100px;
+                grid-template-columns:25% 25% 25% 25%
+            }
+
+            .two {
+                grid-auto-flow: column
+            }
+
+            .three {
+                grid-auto-flow: row
+            }
+
+            header {
+                background: tomato;
+                grid-column: 1 / 5;
+                grid-row: 1 / 2
+            }
+
+            article {
+                background: gold;
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 2;
+                grid-row-end: 3
+            }
+
+            aside {
+                background: lightgreen;
+                grid-column-start: 4;
+                grid-column-end: 5;
+                grid-row-start: 2;
+                grid-row-end: 3
+            }
+
+            footer {
+                background: deepskyblue;
+                grid-column-start: 1;
+                grid-column-end: 5;
+                grid-row-start: 3;
+                grid-row-end: 4
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS3</h1>
+        <hr>
+        <div class="container">
+            <div class="child">Element 1</div>
+            <div class="child">Element 2</div>
+            <div class="child">Element 3</div>
+            <div class="child">Element 4</div>
+            <div class="child">Element 5</div>
+            <div class="child">Element 6</div>
+            <div class="child">Element 7</div>
+            <div class="child">Element 8</div>
+            <div class="child">Element 9</div>
+            <div class="child">Element 10</div>
+            <div class="child">Element 11</div>
+            <div class="child">Element 12</div>
+        </div>
+        <hr>
+        <hr>
+        <div class="container two">
+            <div class="child">Element 1</div>
+            <div class="child">Element 2</div>
+            <div class="child">Element 3</div>
+            <div class="child">Element 4</div>
+            <div class="child">Element 5</div>
+            <div class="child">Element 6</div>
+            <div class="child">Element 7</div>
+            <div class="child">Element 8</div>
+            <div class="child">Element 9</div>
+            <div class="child">Element 10</div>
+            <div class="child">Element 11</div>
+            <div class="child">Element 12</div>
+        </div>
+        <hr>
+        <hr>
+        <hr>
+        <div class="container three">
+            <header>header</header>
+            <article>article</article>
+            <aside>aside</aside>
+            <footer>footer</footer>
+        </div>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <script>
+            _.forEach(document.getElementsByClassName("child"), function(value) {
+                value.setAttribute("style", "background-color: #" + Math.random().toString(16).slice(2, 8).toUpperCase() + ";")
+            });
+        </script>
+    </body>
+</html>
