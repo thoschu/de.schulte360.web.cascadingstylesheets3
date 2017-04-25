@@ -4,10 +4,10 @@
         <meta charset="utf-8">
         <meta name="description" content="Beispielseite für CSS3">
         <title>CSS3 - display: grid;</title>
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" integrity="sha256-8E6QUcFg1KTnpEU8TFGhpTGHw5fJqB9vCms3OhAYLqw=" crossorigin="anonymous"></script>
-        <script src="//use.edgefonts.net/vt323.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js" integrity="sha256-8E6QUcFg1KTnpEU8TFGhpTGHw5fJqB9vCms3OhAYLqw=" crossorigin="anonymous"></script>
+        <script src="https://use.edgefonts.net/vt323.js"></script>
         <style>
             /* apply a natural box layout model to all elements, but allowing components to change */
             html {
@@ -26,7 +26,8 @@
             .container {
                 display: grid;
                 grid-template-rows: 200px 1fr 100px;
-                grid-template-columns: 25% 25% 25% 25%
+                /*grid-template-columns: 25% 25% 25% 25%;*/
+                grid-template-columns: repeat(4, 25%)
             }
 
             .two {
@@ -38,13 +39,15 @@
             }
 
             header {
-                background: tomato;
-                grid-column: 1 / 5;
-                grid-row: 1 / 2
+                background: #778899;
+                grid-column-start: 1;
+                grid-column-end: 5;
+                grid-row-start: 1;
+                grid-row-end: 2
             }
 
             article {
-                background: gold;
+                background: #997788;
                 grid-column-start: 1;
                 grid-column-end: 4;
                 grid-row-start: 2;
@@ -52,7 +55,7 @@
             }
 
             aside {
-                background: lightgreen;
+                background: #889977;
                 grid-column-start: 4;
                 grid-column-end: 5;
                 grid-row-start: 2;
@@ -60,11 +63,50 @@
             }
 
             footer {
-                background: deepskyblue;
-                grid-column-start: 1;
-                grid-column-end: 5;
-                grid-row-start: 3;
-                grid-row-end: 4
+                background: #998877;
+                grid-column: 1 / 5;
+                grid-row: 3 / 4
+            }
+
+            .container2 {
+                display: grid;
+                grid-template-rows: [line-r-1] 1fr [line-r-2] 1fr [line-r-3] 1fr [line-r-4];
+                grid-template-columns: [line-c-1] calc(100%/4)[line-c-2] calc(100%/4) [line-c-3] calc(100%/4) [line-c-4] calc(100%/4) [line-c-5];
+                grid-auto-flow: row
+            }
+
+            .four .child.a {
+                grid-row-start:1;
+                grid-row-end:2;
+                grid-column-start:1;
+                grid-column-end:3;
+            }
+
+            .four .child.b {
+                grid-row-start:1;
+                grid-row-end:2;
+                grid-column-start:3;
+                grid-column-end:5;
+            }
+
+            .four .child.c {
+                grid-row: line-r-2 / line-r-3;
+                grid-column: line-c-1 / line-c-4
+            }
+
+            .four .child.d {
+                grid-row: line-r-2 / line-r-4;
+                grid-column: line-c-4 / line-c-5
+            }
+
+            .four .child.e {
+                grid-row: line-r-3 / line-r-4;
+                grid-column: line-c-1 / line-c-2
+            }
+
+            .four .child.f {
+                grid-row: line-r-3 / line-r-4;
+                grid-column: line-c-2 / line-c-4
             }
         </style>
     </head>
@@ -105,11 +147,24 @@
         <hr>
         <hr>
         <div class="container three">
-            <header>header</header>
-            <article>article</article>
-            <aside>aside</aside>
-            <footer>footer</footer>
+            <header class="">header</header>
+            <article class="">article</article>
+            <aside class="">aside</aside>
+            <footer class="">footer</footer>
         </div>
+        <hr>
+        <hr>
+        <hr>
+        <hr>
+        <div class="container2 four">
+            <div class="child a">Element a</div>
+            <div class="child b">Element b</div>
+            <div class="child c">Element c</div>
+            <div class="child d">Element d</div>
+            <div class="child e">Element e</div>
+            <div class="child f">Element f</div>
+        </div>
+        <hr>
         <hr>
         <hr>
         <hr>
